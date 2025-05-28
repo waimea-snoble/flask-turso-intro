@@ -23,6 +23,8 @@
                     <h4>{{ thing["name"] }}</h4>
                 </header>
 
+                <p>${{ thing["price"] }}</p>
+
                 <p>{{ thing["description"] }}</p>
 
                 <footer>
@@ -35,6 +37,40 @@
 
         {% endfor %}
 
+    </section>
+
+    <section>
+    
+        <article>
+        
+            <form>
+            
+                <label>
+                    name
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    Cost $
+                    <input type="text" name="name" min="0" required>
+                </label>
+
+                <label>
+                    Description
+                    <input type="text" name="name">
+                </label>
+
+                <label>
+                    Rating
+                    <input type="text" name="name" min="0" max ="5"required>
+                </label>
+
+                <button>Add New Thing</button>
+            
+            </form>
+
+        </article>
+    
     </section>
 
 {% endblock %}
